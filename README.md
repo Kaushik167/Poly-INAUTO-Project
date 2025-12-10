@@ -150,11 +150,11 @@ This file contains the final comparison table and the automated column chart vis
 
 ### **📧 7. Email Output**
 <p align="center">
-  <img src="/example_outputs/Email.png width="700"/>
+  <img src="/example_outputs/Email.png" width="700"/>
 </p>
 ---
 
 ### **📱 8. SMS Output**
 <p align="center">
-  <img src="/example_outputs/SmsMessage.jpg width="700"/>
+  <img src="/example_outputs/SmsMessage.jpg" width="700"/>
 </p>
