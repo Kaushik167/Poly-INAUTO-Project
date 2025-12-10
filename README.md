@@ -155,5 +155,5 @@ This file contains the final comparison table and the automated column chart vis
 
 ### **📱 8. SMS Output**
 <p align="center">
-  <img src="/example_outputs/SmsMessage.png width="700"/>
+  <img src="/example_outputs/SmsMessage.jpg width="700"/>
 </p>
