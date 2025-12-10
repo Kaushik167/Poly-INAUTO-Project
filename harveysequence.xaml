@@ -1,0 +1,202 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="harveysequence" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_HNUrl" Type="OutArgument(x:String)" />
+    <x:Property Name="in_searchQuery" Type="InArgument(x:String)" />
+    <x:Property Name="out_HNPrice" Type="OutArgument(x:Double)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1008,2031</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>harveysequence_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C7674ECB070_Calls_Create.Bundle</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C7674ECB070_Messages_Create.Bundle</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>C7674ECB070_Calls_Cr.Op7QdpeBhH1ssPmy3Px4Nr1</AssemblyReference>
+      <AssemblyReference>C7674ECB070_Messages.Whsxj3Xpv2H1HUBWQ4f9ZuR1</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="harveysequence" sap:VirtualizedContainerService.HintSize="1377,1991" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home | Harvey Norman Singapore" sap:VirtualizedContainerService.HintSize="502,1968" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c7dc35e2-dbc8-47a9-a573-5ec2627f6290" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,1726.5" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="harveyProductsTable" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT attraqt_search'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,253.5" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c7dc35e2-dbc8-47a9-a573-5ec2627f6290" Text="[in_searchQuery]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.harveynorman.com.sg/" DesignTimeRectangle="1671, 285, 719, 90" DesignTimeScaleFactor="2" ElementType="InputBox" FriendlyName="'INPUT attraqt_search'" FullSelectorArgument="&lt;webctrl id='attraqt_search' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='attraqt_search' tag='INPUT' type='text' class='input-text search-input' aaname='What are you looking for?' /&gt;" Guid="ceacaeff-fe97-4c7c-a1fc-23d303cf4e1f" InformativeScreenshot="3df7b586a25373705497ab9f4cb627c4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home | Harvey Norman Singapore' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="434,190.5" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c7dc35e2-dbc8-47a9-a573-5ec2627f6290" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.harveynorman.com.sg/" DesignTimeRectangle="2329, 311, 31, 40" DesignTimeScaleFactor="2" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl parentid='search_form' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='search_form' tag='I' type='' class='icon icon-search' aaname='' /&gt;" Guid="2b3ad8be-e2ce-44cc-85ac-845b0d393688" InformativeScreenshot="0cd6bd2f05a734956e0a430c1bb4f453.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home | Harvey Norman Singapore' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,123.5" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Most Relevant'" sap:VirtualizedContainerService.HintSize="434,190.5" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c7dc35e2-dbc8-47a9-a573-5ec2627f6290" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.harveynorman.com.sg/index.php?subcats=Y&amp;status=A&amp;pshort=N&amp;pfull=N&amp;pname=Y&amp;pkeywords=Y&amp;search_performed=Y&amp;q=apple+iphone+16+pro&amp;dispatch=products.search" DesignTimeRectangle="805, 770, 311, 72" DesignTimeScaleFactor="2" ElementType="Text" FriendlyName="'Most Relevant'" FullSelectorArgument="&lt;webctrl id='sw_elm_sort_fields' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sw_elm_sort_fields' tag='A' type='' class='cm-popup-title cm-combination cm-combo-on' aaname=' &amp;#x9;&amp;#x9;Most Relevant &amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9; &amp;#x9;' check:innerText='MOST RELEVANT' /&gt;" Guid="e6c1c8c6-6533-40e9-9a1f-f6d428c8cc1b" InformativeScreenshot="de8fd95d91e587046ade7606c8de74ae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Search results | Harvey Norman Singapore' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sort Alphabetically:'" sap:VirtualizedContainerService.HintSize="434,190.5" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c7dc35e2-dbc8-47a9-a573-5ec2627f6290" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.harveynorman.com.sg/index.php?subcats=Y&amp;status=A&amp;pshort=N&amp;pfull=N&amp;pname=Y&amp;pkeywords=Y&amp;search_performed=Y&amp;q=apple+iphone+16+pro&amp;dispatch=products.search" DesignTimeRectangle="807, 441, 416, 60" DesignTimeScaleFactor="2" ElementType="Text" FriendlyName="'Sort Alphabetically:'" FullSelectorArgument="&lt;webctrl aaname='Sort Alphabetically: A to Z' parentid='elm_sort_fields' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Sort Alphabetically: A to Z' parentid='elm_sort_fields' tag='A' type='' class='cm-ajax cm-history' check:innerText='Sort Alphabetically: A to Z' /&gt;" Guid="fd9893cb-22b2-4151-bfb4-bc13b1133f5c" InformativeScreenshot="4263b462ed6cec4c9a5a0b0286dd5762.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Search results | Harvey Norman Singapore' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,123.5" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[harveyProductsTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='ProductUrl'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Price'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='form' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext' name2='Column2' attr2='href'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='form' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='form' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' text='inc tax' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="434,190.5" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="c7dc35e2-dbc8-47a9-a573-5ec2627f6290" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.harveynorman.com.sg/index.php?subcats=Y&amp;status=A&amp;pshort=N&amp;pfull=N&amp;pname=Y&amp;pkeywords=Y&amp;search_performed=Y&amp;q=Apple+iphone+16+pro+max+512GB&amp;dispatch=products.search&amp;sort_by=product&amp;sort_order=asc" DesignTimeRectangle="572, 419, 1175, 674" DesignTimeScaleFactor="1.25" FriendlyName="'Sort Alphabetically:'" FullSelectorArgument="&lt;webctrl id='pagination_contents' tag='DIV' /&gt;" Guid="c67c0327-9d38-46e6-b0a1-524ad87e0e94" InformativeScreenshot="aff54af1f644098b824e85733e308e77.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Search results | Harvey Norman Singapore' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <Assign sap:VirtualizedContainerService.HintSize="434,115.5" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Double">[out_HNPrice]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[CInt(System.Text.RegularExpressions.Regex.Replace(harveyProductsTable.Rows(0)("Price").ToString, "[^\d]", ""))]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="434,115.5" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[out_HNUrl]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[harveyProductsTable.Rows(0)("ProductUrl").ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,171" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Lowest price from Harvey Norman for &quot; + in_searchQuery + &quot; is: $&quot; + out_HNPrice.ToString]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-13, -13, 2906, 1826" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAMXSURBVDhPHc5bTFMHHMfxf9tDu3Lx1qBMoFAY3WAIuKUFFDUs4oBRqDBsBpEYXFiyF7Ml2xI3ddXtaWM8sGxD3MUsXoCYmCwhS1g0irINkXItbSn3Xqy0FFvb08PpOb/FJd/XT/KlzVBQhMDyW+FnIWwBW4gDLBDguAgXB4/n3g0RCMc5HgIrcATwc7ZpEUKMjWAL/hU3D0T+jweigU3wmLNbeQgun1sET0GvS6vJzM1R70xJ7DSbjx2uUGXsYVJTqk1GbXFBo6F2Zmy06d2GHarkw4fKNtY9BIFvP9kilZI2Lzey7j//yackJe3+13+4+jNJKUed2dPdPTFlISl9dekCRJ4iEbbn8hWSyU+YWtlA5Jfu3sSEpLp3jKsrXqUiWU5M+u6MKatdokwam5x54g+QCFy9dpMkTKY6p67KUHXgrWRpoq5It+Zc0xXpUpNUMmLqm0wkY0YtU5wIghjv6upUKBKIqKSgULMnTUHUWF3jnncWaHIMR6v27k5NUMgpQTJwq1+EQBCFc1+cVe3akZ2tfh5+9tuvvTKiIxWltrnp/NdeeTz+b1Nzo0RGKbu2DQz04QUQcPHLr+WM4o03dTGI127300sSrb7w7vjf0p2Jg8N/WRxWmVKpTNl2/94IG+UpFGZNJ1olxKS/nPFj7+W2D9qJIWa74szZj4mhAl3xtNN+/oKZSNp36zYPUIBjT3W8v+/V/EpdaU/Xd52XzG9XlBXlZv3+0/ffms+ZGuq8Swsux7yxvmFkwuLjogQ+Fl9ewmYUix48DcGxAqsTvgA8AfiCWPJg9Sm8QSx7EIuCixAmZ4bbOh4dbZ4orfMbTruPNI/nHXiYVujSG0Y1erR/tnG8I3TyI3zT6/z8IpZXCYvugaKKP9NKJjLKH6mK/0nOW8wuX8gqs6XtfyDPsqn1lnT9WHrp4N6SHs0+LKwRvOHrte/dyK8cKqyerTm91npmoeXDoUM19yrrJ4+fGtLXDB9seniw+Y9y401jGxxugicEqwfzUdxxYNwDuw8214tv6yKW1zHmhD2Ix08w68fIHAKx/wDdOLE1u2LpkgAAAABJRU5ErkJggg==" InformativeScreenshot="3ac2c85c5106a3d7356336b8bad83490.jpg" Selector="&lt;html app='chrome.exe' title='Home | Harvey Norman Singapore' /&gt;" Title="Home | Harvey Norman Singapore" Url="https://www.harveynorman.com.sg/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

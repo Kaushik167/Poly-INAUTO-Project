@@ -1,0 +1,200 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="gaincitysequence" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_GCUrl" Type="OutArgument(x:String)" />
+    <x:Property Name="in_searchQuery" Type="InArgument(x:String)" />
+    <x:Property Name="out_GCPrice" Type="OutArgument(x:Double)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1008,2120</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>gaincitysequence_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="gaincitysequence" sap:VirtualizedContainerService.HintSize="1377,2080" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gain City Online Store" sap:VirtualizedContainerService.HintSize="502,2057" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4b966260-d7ca-4484-9a3b-d7c873e7ab89" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,1815.5" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="gainProductTable" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT minisearch-input-…'" sap:VirtualizedContainerService.HintSize="434,190.5" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b966260-d7ca-4484-9a3b-d7c873e7ab89" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.gaincity.com/" DesignTimeRectangle="668, 207, 1442, 100" DesignTimeScaleFactor="2" ElementType="InputBox" FriendlyName="'INPUT minisearch-input-…'" FullSelectorArgument="&lt;webctrl id='minisearch-input-top-search' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='minisearch-input-top-search' tag='INPUT' type='text' class='input-text' aaname='                     Search                 ' /&gt;" Guid="5dbb660b-6d64-4951-a2f0-606dc8a14db3" InformativeScreenshot="f8f0e0e8d78f31a3382383304b3815db.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='12475847' title='Gain City Online Store' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT minisearch-input-…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,253.5" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="4b966260-d7ca-4484-9a3b-d7c873e7ab89" Text="[in_searchQuery]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.gaincity.com/" DesignTimeRectangle="668, 207, 1442, 100" DesignTimeScaleFactor="2" ElementType="InputBox" FriendlyName="'INPUT minisearch-input-…'" FullSelectorArgument="&lt;webctrl id='minisearch-input-top-search' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='minisearch-input-top-search' tag='INPUT' type='text' class='input-text' aaname='                     Search                 ' /&gt;" Guid="df6a6571-68a8-4b63-911a-d6bb8b68498d" InformativeScreenshot="b8d251745fd51109eb8186d0d924d8dc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='12475847' title='Gain City Online Store' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="434,190.5" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b966260-d7ca-4484-9a3b-d7c873e7ab89" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.gaincity.com/" DesignTimeRectangle="668, 207, 100, 100" DesignTimeScaleFactor="2" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='action search' aaname='Search' check:text='Search' /&gt;" Guid="73c6725e-e3fb-45a1-b769-70ee3eb62a07" InformativeScreenshot="25cf5fd4140caabd0356257ec5f3ff4d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='12475847' title='Gain City Online Store' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sort By'" sap:VirtualizedContainerService.HintSize="434,190.5" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b966260-d7ca-4484-9a3b-d7c873e7ab89" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.gaincity.com/catalogsearch/result/?q=heelo" DesignTimeRectangle="2388, 761, 234, 100" DesignTimeScaleFactor="2" ElementType="DropDown" FriendlyName="'Relevance'" FullSelectorArgument="&lt;webctrl id='sorter' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sorter' tag='SELECT' type='' class='sorter-options' aaname='Sort By' /&gt;" Guid="09baf6d9-54ca-4c6b-8a6d-4388c0136d02" InformativeScreenshot="a75688bb95c663c0a04073f083135b16.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='12475847' title='Search results for: &amp;apos;heelo&amp;apos;' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="2299, 779, 79, 64" ElementType="Text" FriendlyName="'Sort By'" FullSelectorArgument="&lt;webctrl class='sorter-label' parentid='maincontent' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl class='sorter-label' parentid='maincontent' tag='LABEL' type='' aaname='Sort By' check:innerText='Sort By' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="434,212.5" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Enter)][u(hk)]" Version="V3" />
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,123.5" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[gainProductTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Price'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator='.' ThousandsSeparator=',' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='ProductUrl'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='strong' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='href'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='strong' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="434,190.5" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="4b966260-d7ca-4484-9a3b-d7c873e7ab89" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="539, 183, 1215, 3403" DesignTimeScaleFactor="1.25" FriendlyName="'APPLE IPHONE'" FullSelectorArgument="&lt;webctrl tag='OL' /&gt;" Guid="84b7b037-1f3d-47a6-b906-d9bc0599c782" InformativeScreenshot="61055cb3bb739c28b06fb0bc66f66f7f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='61224576' title='Shop Apple iPhone 16 Pro &amp;amp; Pro Max in Singapore | Gain City' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <Assign sap:VirtualizedContainerService.HintSize="434,115.5" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Double">[out_GCPrice]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Double">[CDbl(System.Text.RegularExpressions.Regex.Replace(gainProductTable.Rows(0)("Price").ToString, "[^\d]", "")) / 100]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="434,115.5" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[out_GCUrl]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[gainProductTable.Rows(0)("ProductUrl").ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,171" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Lowest price from Gain City for &quot; + in_searchQuery + &quot; is: $&quot; + out_GCPrice.ToString]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-13, -13, 2906, 1826" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="54d28752e605b85b0906801221eeb682.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='12475847' title='Gain City Online Store' /&gt;" Title="Gain City Online Store" Url="https://www.gaincity.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
