@@ -164,3 +164,14 @@ This project also includes a video demonstration of the automated **Voice Call**
 <p align="center">
   <a href="https://drive.google.com/file/d/1v53xQThBfPAHZ_Nov4U-ic17RkS9925y/view?usp=sharing">Click to View Video Demonstration (Online Playback)</a>
 </p>
+
+## 📦 Future Enhancements
+- Add more retailer websites  
+- Include product image extraction  
+- Introduce ML-based fuzzy product name matching  
+- Build a full GUI desktop app or web frontend  
+
+---
+
+## 📄 License
+This project is for educational and demonstration purposes.
